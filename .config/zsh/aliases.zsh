@@ -36,6 +36,7 @@ alias rm="rm -r"
 
 alias ll="eza -l -g --icons"
 alias la='exa -a --icons --color'
+alias lla='exa -la --icons --color'
 alias lt='exa --tree --icons --color'
 alias ls='exa --icons --color=auto'
 
