@@ -1,0 +1,3 @@
+[mgr]
+    # Border
+  border_style  = { fg = "blue" }
