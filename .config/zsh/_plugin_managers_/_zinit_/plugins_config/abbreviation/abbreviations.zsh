@@ -9,24 +9,7 @@
 # ├─┘├─┤│  │││├─┤│││
 # ┴  ┴ ┴└─┘┴ ┴┴ ┴┘└┘
 #----------------------------------
-abbr p="pacman"                 --global
-abbr ps="pacman -Sy"            --global
-abbr psu="pacman -Syu"          --global
 abbr pi="pacman -S %"           --global
-abbr pr="pacman -R %"           --global
-abbr prn="pacman -Rn %"         --global
-abbr prns="pacman -Rns %"       --global
-abbr pss="pacman -Ss %"         --global
-abbr psq="pacman -Qs %"         --global
-abbr pqi="pacman -Qi %"         --global
-abbr pql="pacman -Ql %"         --global
-abbr pqd="pacman -Qd"           --global
-abbr pcc="pacman -Sc"           --global
-abbr pccl="pacman -Scc"         --global
-abbr pdb="pacman -Db"           --global
-abbr ple="pacman -Qe"           --global
-abbr por="pacman -Qdt"          --global
-abbr pui="pacman -S --needed %" --global
 
 
 
@@ -77,6 +60,8 @@ abbr gsl="git stash list"         --global
 # Push and pull
 abbr gp="git push"                --global
 abbr gpf="git push --force-with-lease" --global
+abbr gpsu="git push --set-upstream origin %" --global
+abbr gpnb="git push --set-upstream origin $(git branch --show-current)" --global
 abbr gpu="git pull"               --global
 abbr gpl="git pull"               --global
 

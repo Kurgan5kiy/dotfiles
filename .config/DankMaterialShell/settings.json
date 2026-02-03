@@ -3,7 +3,12 @@
   "currentThemeCategory": "registry",
   "customThemeFile": "/home/beholder/.config/DankMaterialShell/themes/catppuccin/theme.json",
   "registryThemeVariants": {
-    "everforest": "hard"
+    "everforest": "hard",
+    "gruvboxMaterial": "hard",
+    "catppuccin": {
+      "flavor": "mocha",
+      "accent": "mauve"
+    }
   },
   "matugenScheme": "scheme-tonal-spot",
   "runUserMatugenTemplates": true,
