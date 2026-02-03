@@ -17,6 +17,7 @@ GREEN=$'%F{green}'
 YELLOW=$'%F{yellow}'
 CYAN=$'%F{cyan}'
 RESET=$'%f'
+CORRECT_IGNORE="log"
 
 # -- load keybindings
 source "$_dir_"/keybindings.zsh
@@ -32,7 +33,6 @@ source "$_dir_"/environments.zsh
 
 
 # -- load plugin manager --
-
 if [[ -d "$plugin_managers" ]]; then
     source "$plugin_managers/plugin_manager_handler.zsh"
 else
