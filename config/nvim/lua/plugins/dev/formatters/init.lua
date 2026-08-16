@@ -1,0 +1,33 @@
+return {
+	"stevearc/conform.nvim",
+	opts = {
+		formatters_by_ft = {
+			lua = { "stylua" },
+			python = { "ruff_format" },
+			javascript = { "prettier" },
+			javascriptreact = { "prettier" },
+			typescript = { "prettier" },
+			typescriptreact = { "prettier" },
+			html = { "prettier" },
+			css = { "prettier" },
+			sh = { "shfmt" },
+			sass = { "sass-formater" },
+			scss = { "prettier" },
+			xml = { "xmlformat" },
+			c = { "clang-format" },
+			cpp = { "clang-format" },
+			java = { "google-java-format" },
+			markdown = { "prettier" },
+			json = { "prettier" },
+			jsonc = { "prettier" },
+			rust = { "rustfmt" },
+			yaml = { "yamlfmt" },
+			toml = { "taplo" },
+		},
+
+		format_on_save = {
+			timeout_ms = 1000,
+			lsp_format = "fallback",
+		},
+	},
+}
