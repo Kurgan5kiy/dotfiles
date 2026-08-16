@@ -3,5 +3,36 @@
         "transparency": {
             "enabled": true
         }
+    },
+    "bar": {
+        "clock": {
+            "background": false,
+            "showDate": true,
+            "showIcon": false
+        },
+        "persistent": false,
+        "showOnHover": true,
+        "status": {
+            "showAudio": true,
+            "showKbLayout": true
+        },
+        "tray": {
+            "compact": true,
+            "recolour": true
+        }
+    },
+    "general": {
+        "apps": {
+            "terminal": [
+                "kitty"
+            ]
+        }
+    },
+    "services": {
+        "useFahrenheit": false,
+        "useTwelveHourClock": false
+    },
+    "sidebar": {
+        "enabled": true
     }
 }
