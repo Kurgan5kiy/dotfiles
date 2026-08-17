@@ -1,4 +1,4 @@
-local scheme = require("scheme.current")
+local ok, scheme = pcall(require, "scheme.current"); if not ok or type(scheme) ~= "table" then scheme = require("scheme.default") end
 local vars   = require("variables")
 
 hl.config({

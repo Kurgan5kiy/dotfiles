@@ -1,9 +1,9 @@
 local vars = require("variables")
 local fn = require("utils.functions")
-
 hl.on("hyprland.start", function()
 	-- Keyring and auth
-	hl.exec_cmd("gnome-keyring-daemon --start --components=secrets")
+	hl.exec_cmd("dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP XDG_STATE_HOME")
+	hl.exec_cmd("gnome-keyring-daemon --start --components=secrets,pkcs11,ssh")
 	hl.exec_cmd("/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1")
 
 	-- Clipboard history
@@ -22,6 +22,7 @@ hl.on("hyprland.start", function()
 	hl.exec_cmd("gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'")
 	hl.exec_cmd("gsettings set org.gnome.desktop.interface gtk-theme 'adw-gtk3-dark'")
 	hl.exec_cmd("gsettings set org.gnome.desktop.interface icon-theme 'Papirus-Dark'")
+
 	-- Location provider and night light
 	hl.exec_cmd("/usr/lib/geoclue-2.0/demos/agent")
 	hl.exec_cmd("sleep 1 && gammastep")

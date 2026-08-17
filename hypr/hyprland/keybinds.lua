@@ -104,9 +104,18 @@ create_bind("SUPER + J", hl.dsp.focus({ direction = "down" }), repeating)
 create_bind("SUPER + K", hl.dsp.focus({ direction = "up" }), repeating)
 create_bind("SUPER + L", hl.dsp.focus({ direction = "right" }), repeating)
 
--- Resize mode
-create_bind(vars.kbResizeMode, hl.dsp.submap("resize"))
+-- Window modes
+create_bind(vars.kbWindowMode, hl.dsp.submap("window"))
 
+hl.define_submap("window", function()
+	create_bind("S", hl.dsp.submap("move"))
+	create_bind("R", hl.dsp.submap("resize"))
+
+	create_bind("Escape", hl.dsp.submap("reset"))
+	create_bind("catchall", hl.dsp.no_op())
+end)
+
+-- Resize mode
 hl.define_submap("resize", function()
 	create_bind("H", fn.resize_active_window(-10, 0), repeating)
 	create_bind("J", fn.resize_active_window(0, -10), repeating)
@@ -118,8 +127,6 @@ hl.define_submap("resize", function()
 end)
 
 -- Move/swap mode
-create_bind(vars.kbMoveMode, hl.dsp.submap("move"))
-
 hl.define_submap("move", function()
 	-- Move the focused window
 	create_bind("H", hl.dsp.window.move({ direction = "left" }), repeating)

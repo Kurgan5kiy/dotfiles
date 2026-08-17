@@ -16,9 +16,44 @@
             "showAudio": true,
             "showKbLayout": true
         },
+        "statusIcons": [
+            {
+                "enabled": true,
+                "id": "lockStatus"
+            },
+            {
+                "enabled": true,
+                "id": "audio"
+            },
+            {
+                "enabled": false,
+                "id": "microphone"
+            },
+            {
+                "enabled": true,
+                "id": "kbLayout"
+            },
+            {
+                "enabled": true,
+                "id": "network"
+            },
+            {
+                "enabled": true,
+                "id": "bluetooth"
+            },
+            {
+                "enabled": true,
+                "id": "battery"
+            }
+        ],
         "tray": {
             "compact": true,
             "recolour": true
+        },
+        "workspaces": {
+            "activeTrail": false,
+            "occupiedBg": false,
+            "showWindows": true
         }
     },
     "general": {
@@ -70,6 +105,11 @@
                 "enabled": true,
                 "id": "vpn"
             }
-        ]
+        ],
+        "vpn": {
+            "provider": [
+            ],
+            "selectedProvider": ""
+        }
     }
 }

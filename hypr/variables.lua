@@ -1,4 +1,7 @@
-local scheme = require("scheme.current")
+local ok, scheme = pcall(require, "scheme.current")
+if not ok or type(scheme) ~= "table" then
+	scheme = require("scheme.default")
+end
 
 return {
 	------------------
@@ -100,8 +103,7 @@ return {
 	kbGroupLockActive = "SUPER + SHIFT + Comma",
 
 	-- Window modes/actions
-	kbResizeMode = "SUPER + SHIFT + R",
-	kbMoveMode = "SUPER + SHIFT + S",
+	kbWindowMode = "SUPER + SHIFT + W",
 
 	kbMoveWindow = "SUPER + Z",
 	kbResizeWindow = "SUPER + X",
@@ -128,7 +130,7 @@ return {
 
 	-- Utilities
 	kbScreenshot = "Print",
-	kbScreenshotFreeze = "CTRL + SUPER + SHIFT + S",
+	kbScreenshotFreeze = "SUPER + SHIFT + S",
 	kbScreenshotRegion = "SUPER + SHIFT + ALT + S",
 	kbRecord = "CTRL + ALT + R",
 	kbRecordSound = "SUPER + ALT + R",
